@@ -1,0 +1,28 @@
+version: "2.1"
+
+# docksal.yml
+services:
+  web:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: apache
+    environment:
+      - APACHE_FILE_PROXY
+      - NEW_VAR="foobarbaz"
+      - NEW_CUSTOM
+    volumes:
+      - project_root:/var/www:ro,nocopy  # Project root volume
+      - ${PROJECT_ROOT}/.docksal/etc/apache/host.conf:/usr/local/apache2/conf/extra/includes/host.conf:ro
+    depends_on:
+      - cli
+
+  mail:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: mail
+
+  cli:
+#    image: docksal/cli:2.11-php7.2
+    environment:
+      - SUPER_SECRET_API_KEY=12345
+      - CUSTOM_VARIABLE

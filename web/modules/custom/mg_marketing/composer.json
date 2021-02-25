@@ -1,0 +1,26 @@
+{
+  "name": "drupal/mg_marketing",
+  "description": "Provides marketing functionality/enhancements for Mindgrub Drupal projects.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Brian Thompson",
+      "email": "bthompson@mindgrub.com",
+      "homepage": "https://github.com/rvtraveller"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/metatag": "^1",
+    "drupal/google_analytics": "^2",
+    "drupal/google_tag": "1.x-dev",
+    "drupal/simple_sitemap": "^3"
+  }
+}
