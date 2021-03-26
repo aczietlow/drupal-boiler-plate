@@ -59,4 +59,4 @@ fi
 
 fin exec "$PHPCS --config-set installed_paths $WEB_CONTAINER_PROJECT_ROOT/vendor/drupal/coder/coder_sniffer"
 fin exec "$PHPCS --config-set colors 1"
-fin exec "$PHPCBF --standard=Drupal --extensions='inc,php,module' --ignore='*tpl.php' web/modules/custom"
+fin exec "composer code-fix"
