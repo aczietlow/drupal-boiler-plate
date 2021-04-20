@@ -99,6 +99,20 @@
             },
             "file-mapping": {
                 "[project-root]/.editorconfig": false
+            },
+            "drupal-core-project-message": {
+                "post-create-project-cmd-message": [
+                    "<bg=blue;fg=white>                                                         </>",
+                    "<bg=white;fg=orange>  Congratulations, you’ve installed the Drupal codebase  </>",
+                    "<bg=white;fg=orange>  from the mindgrub/drupal-boiler-plate template!      </>",
+                    "<bg=blue;fg=white>                                                         </>",
+                    "",
+                    "<bg=yellow;fg=black>Next steps</>:",
+                    "  * Read the user guide: https://mindgrub.atlassian.net/wiki/spaces/WEB/pages/22033498/Drupal",
+                    "  * Create Pantheon environment: https://mindgrub.atlassian.net/wiki/spaces/WEB/pages/1778417670/Creating+a+Druapl+site+on+Pantheon.io",
+                    "  * Get involved with the Drupal community:",
+                    "      https://www.drupal.org/getting-involved"
+                ]
             }
         }
     },
