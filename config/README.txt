@@ -1,1 +1,1 @@
-This directory structure ins the staging config for yocontaur site.
+This directory structure contains the staging config for your site.
