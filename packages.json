@@ -1,0 +1,11 @@
+{
+  "package": {
+    "name": "mindgrub/drupal-boiler-plate",
+    "version": "0.5.0",
+    "source": {
+      "url": "git@git.mindgrub.net:web/drupal-boiler-plate.git",
+      "type": "git",
+      "reference": "master"
+    }
+  }
+}
