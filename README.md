@@ -59,6 +59,7 @@ Some common tasks that can be handled by the init script (an other [custom comma
 
 ## Tools
 - `fin sequelace` SequelACE is a free alternative to sequel pro thats a bit more stable.
+- `fin codesniff` Runs phpcs against Drupal and DrupalPractice standards. Pass a `--fix` flag to run phpcbf instead. Config is set in tests/phpcs.xml, go there to adjust settings as needed.
 
 ## Security notice
 
