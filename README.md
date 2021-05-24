@@ -57,6 +57,8 @@ Some common tasks that can be handled by the init script (an other [custom comma
 - run DB updates, revert features, clear caches, etc.
 - enable/disable modules, update variables values
 
+## Tools
+- `fin sequelace` SequelACE is a free alternative to sequel pro thats a bit more stable.
 
 ## Security notice
 
