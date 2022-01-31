@@ -87,7 +87,7 @@ class ScriptHandler
   // @TODO Add this with a custom starter theme.
   public static function buildCustomTheme(Event $event) {
     $root = static::getDrupalRoot(getcwd());
-//    $process = new Process('cd ' . $root . '/themes/custom/packaging_law && npm install && npm install -g gulp-cli && gulp deploy');
+//    $process = new Process('cd ' . $root . '/themes/custom/packaging_law && npm ci --prefer-offline && npm install -g gulp-cli && gulp deploy');
 //    $process->setTimeout(3600);
 //    $process->run();
 //    // Executes after the command finishes.

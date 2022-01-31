@@ -67,6 +67,10 @@ web/web.config
 ### to the Pantheon repository.
 ###
 
+# GitLab CI #
+#############
+/.cache/
+
 # Ignore Drupal's file directory
 web/sites/default/files
 
