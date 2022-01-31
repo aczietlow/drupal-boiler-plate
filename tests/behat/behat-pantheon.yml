@@ -22,7 +22,7 @@ default:
       sessions:
         default:
           chrome:
-            api_url: "http://localhost:9222"
+            api_url: "http://headless-chrome:9222"
             validate_certificate: false
 
     Drupal\DrupalExtension:
