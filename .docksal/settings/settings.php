@@ -670,11 +670,6 @@ if ($settings['hash_salt']) {
 # $config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
 
 /**
- * Load services definition file.
- */
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
-
-/**
  * Override the default service container class.
  *
  * This is useful for example to trace the service container for performance
@@ -779,3 +774,27 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 }
 
 $config_directories['sync'] = '../config/sync';
+
+/**
+ * Load services definition file.
+ */
+$settings['container_yamls'][] = __DIR__ . '/services.yml';
+
+/**
+ * Include the Pantheon-specific settings file.
+ *
+ * n.b. The settings.pantheon.php file makes some changes
+ *      that affect all envrionments that this site
+ *      exists in.  Always include this file, even in
+ *      a local development environment, to insure that
+ *      the site settings remain consistent.
+ */
+include __DIR__ . "/settings.pantheon.php";
+
+/**
+ * If there is a local settings file, then include it
+ */
+$local_settings = __DIR__ . "/settings.local.php";
+if (file_exists($local_settings)) {
+  include $local_settings;
+}

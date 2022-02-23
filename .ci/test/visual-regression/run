@@ -14,7 +14,7 @@ GITHUB_API_URL="https://api.github.com/repos/$CI_PROJECT_USERNAME/$CI_PROJECT_RE
 GIT_FILE_MODIFIED()
 {
     # Stash list of changed files
-    GIT_FILES_CHANGED="$(git diff origin/master --name-only)"
+    GIT_FILES_CHANGED="$(git diff origin/main --name-only)"
 
     while read -r changedFile; do
         if [[ "${changedFile}" == "$1" ]]

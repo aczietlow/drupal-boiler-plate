@@ -123,3 +123,4 @@ Thumbs.db
 behat-local.yml
 
 local.services.yml
+/.editorconfig

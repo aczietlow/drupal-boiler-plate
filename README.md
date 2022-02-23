@@ -1,10 +1,10 @@
-# Docksal powered Drupal 8 With Composer Installation
+# Docksal powered Drupal 9 With Composer Installation
 
-This is a sample Drupal 8 with Composer installation pre-configured for use with Docksal.
+This is a sample Drupal 9 with Composer installation pre-configured for use with Docksal.
 
 Features:
 
-- Drupal 8 Composer Project
+- Drupal 9 Composer Project
 - `fin init` [example](.docksal/commands/init)
 - Using the [default](.docksal/docksal.env#L9) Docksal LAMP stack with [image version pinning](.docksal/docksal.env#L13-L15)
 - PHP and MySQL settings overrides [examples](.docksal/etc)
@@ -22,8 +22,8 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/en/maste
 1. Clone this repo into your Projects directory
 
     ```
-    git clone https://github.com/docksal/example-drupal8-composer.git drupal8
-    cd drupal8
+    git clone https://github.com/docksal/example-drupal9-composer.git drupal9
+    cd drupal9
     ```
 
 2. Initialize the site
@@ -38,7 +38,7 @@ Follow [Docksal environment setup instructions](https://docs.docksal.io/en/maste
 3. Point your browser to
 
     ```
-    http://drupal8.docksal
+    http://drupal9.docksal
     ```
 
 When the automated install is complete the command line output will display the admin username and password.
