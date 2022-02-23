@@ -7,6 +7,7 @@ variables:
   DEFAULT_SITE: $CI_PROJECT_NAME
   PR_NUMBER: $CI_MERGE_REQUEST_IID
   CI_BRANCH: $CI_COMMIT_REF_NAME
+  DEFAULT_BRANCH: main
 
 # Cache libraries in between jobs
 cache:
@@ -54,7 +55,7 @@ configure:env-vars:
       - bash_env.txt
   only:
   - merge_requests
-  - master
+  - main
 
 test:static:
   stage: configure-and-build
@@ -62,7 +63,7 @@ test:static:
     - ./.ci/test/static/run
   only:
     - merge_requests
-    - master
+    - main
   except:
     - schedules
 
@@ -89,7 +90,7 @@ build:php:
       - web/sites
   only:
     - merge_requests
-    - master
+    - main
   except:
     - schedules
 
@@ -112,7 +113,7 @@ deploy:pantheon:dev:
     - echo "Target site.env is $TERMINUS_SITE.$TERMINUS_ENV"
     - ./.ci/deploy/pantheon/dev-multidev
   only:
-    - master
+    - main
 
 deploy:pantheon:multidev:
   extends: .pantheon_deploy
@@ -170,7 +171,7 @@ test:behat:
     - build:php
   only:
     - merge_requests
-    - master
+    - main
   resource_group: pantheon
   except:
     - schedules
@@ -182,7 +183,7 @@ test:behat:cleanup:
     - ./.ci/test/behat/cleanup
   only:
     - merge_requests
-    - master
+    - main
   resource_group: pantheon
   except:
     - schedules
