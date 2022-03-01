@@ -17,6 +17,7 @@
         "php": ">=7.3",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
+        "wikimedia/composer-merge-plugin": "*",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
@@ -85,6 +86,8 @@
         "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon"
     },
     "extra": {
+        "patches": {
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -92,8 +95,6 @@
             "allowed-packages": [
                 "pantheon-systems/drupal-integrations"
             ]
-        },
-        "patches": {
         },
         "installer-paths": {
             "web/core": [
@@ -126,6 +127,21 @@
                 "type:drupal-custom-theme"
             ]
         },
-        "installer-types": ["bower-asset", "npm-asset"]
+        "installer-types": ["bower-asset", "npm-asset"],
+        "merge-plugin": {
+            "include": [
+                "composer.local.json"
+            ],
+            "require": [
+                "composer.mindgrub.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
+        }
     }
 }
