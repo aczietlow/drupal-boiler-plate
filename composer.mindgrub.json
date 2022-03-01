@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://git.mindgrub.net/web/drupal/d9/mg-base-theme.git"
+    }
+  ],
+  "require": {
+    "drupal/mg_base_theme": "dev-main"
+  }
+}
